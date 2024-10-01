@@ -235,3 +235,46 @@ function timesDiffTermsForInputs(a,b){
 /*
 it will be O(a*b)
 */
+
+
+/*
+Big O of Arrays
+
+it is important to understand this so we can compare arrays to other data structures 
+
+myArray = [11, 3 , 23 ,7]
+            0   1   2   3
+
+myArray.push(17) = [11, 3 , 23 ,7, 17]
+myArray.pop()
+
+push and pop are both O(1) operations
+
+
+myArray.shift() = 
+[3, 23, 7]
+ 1  2  3
+the problem here is that the index here is incorrect. the first item in the array should be 0
+
+likewise if we unshift an item the array needed to be reindexed because the order of the initial numbers changes.
+
+this is a O(n) operation where n is the number of items in the array. 
+*/
+
+
+
+
+
+/*
+were mainly going to focus on 4 big 0 notations 
+
+1 o(n) - proportional
+2 o(n^2) - loop within a loop
+3 o(log n) - divide and conquer 
+4 o(1) - constant time 
+
+the most efficient is constant 
+
+0(10n^2) is written as o(n^2) because we drop constants
+0(n^2 +n) is written as 0(n^2) because we drop non dominants 
+*/
