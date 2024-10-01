@@ -15,16 +15,79 @@ ex:
 */
 
 
-//O(n)
+//   1: O(n)
+
 function logItems(n){
     for(let i = 0; i < n; i++){
         console.log(i)
     }
 }
-logItems(10)
+
+//logItems(10)
+
  /* 
  This is an O(n) operation. 
 
  We pass "n" to the function to run "n" number of times.
  O(n) has a equal proportional number of operations. it moves in a straight line 
+
+
+ BigO has several ways to simplify its notation.
+
+ Drop constants or remove constants 
  */
+
+ function dropConstants(n){
+    for(let i = 0; i < n; i++){
+        console.log(i)
+    }
+    for(let j = 0; j < n; j++){
+        console.log(j)
+    }
+}
+//dropConstants(3)
+
+/* logs 0 1 2 0 1 2 
+
+n + n or 2n
+It is considered a 0(2n) operation.
+
+therefore if k was added to function:
+n + n + "n"
+it would be 0(3n)
+
+
+this is where simplification comes in. 
+it doesn't matter if it is 3n 10n or 100n.
+
+So the first rule of simplifying bigO notation is to drop the constant.
+we drop it can call it 0(n)
+*/
+
+
+
+
+/*   2: 0(n^2)
+
+consider the following function that has 2 loops in the function to print n + n
+function nSquared(n){
+    for(let i = 0; i < n; i++){
+        console.log(i)
+    }
+    for(let j = 0; j < n; j++){
+        console.log(j)
+    }
+}
+*/
+
+function nSquared(n){
+    for(let i = 0; i < n; i++){
+        for(let j =0; j < 0; j++){
+            console.log(i,j)
+        }
+    }
+}
+nSquared(10)
+
+
+
